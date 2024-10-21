@@ -1,0 +1,19 @@
+<p>characters-list-component works!</p>
+<div class="row">
+    @for (item of listadoPersonajes; track item.id) {
+    <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.image" class="card-img-top" [alt]="item.image">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">
+                    {{item.status}} - {{item.species}}<br>
+                    <i class="bi bi-wifi"></i> Wifi  <!--{{item.wifi == true }}-->
+                </p>
+                <a href="tel:902202122" class="btn btn-primary">Call</a>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
